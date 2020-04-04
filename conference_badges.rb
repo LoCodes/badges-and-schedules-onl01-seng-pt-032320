@@ -35,11 +35,11 @@ end
    #should puts the list of badges and room_assignments
 
 def printer(attendees)
-  batch_badge_creator.each do |attendee|
-    puts attendee
+  batch_badge_creator(attendees).each do |badge|
+    puts badge
   end
 
-  assign_rooms(attendees).each do |attendee|
-    attendee
-  end
+  assign_rooms(attendees).each do |assignment|
+    puts assignment
+    end
 end
